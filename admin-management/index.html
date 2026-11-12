@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kifaru 4x4 · Admin Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nobile:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="signin-view" class="signin">
+  <div class="wrap">
+    <form id="signin-form">
+      <div class="eyebrow" style="color:var(--bandmuted)">Kifaru 4x4 Hire · Staff only</div>
+      <h1>Sign in to the admin</h1>
+      <label>Email<input type="email" id="si-email" value="admin@example.com" required autocomplete="username"></label>
+      <label>Password<input type="password" id="si-pass" value="demo-password" required autocomplete="current-password"></label>
+      <button class="btn" type="submit">Sign in</button>
+      <p style="font-size:12px;color:var(--bandmuted)">Demo: any email and password signs you in. <a href="../client-booking-v2/" style="color:var(--bandfg)">Go to the client site</a></p>
+    </form>
+  </div>
+</div>
+
+<div id="app-view" hidden>
+  <header class="bar">
+    <div class="wrap">
+      <div class="brand">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 25l4-8h8l5-5 5 2-2 5 3 6z" fill="currentColor"/></svg>
+        Kifaru 4x4 <small>Admin</small>
+      </div>
+      <nav class="menu" aria-label="Admin menu" id="menu"></nav>
+      <div class="who"><a class="link" href="../client-booking-v2/" style="color:var(--bandfg)">Client site ↗</a><span id="who-email"></span><button class="link" type="button" data-action="signOut">Sign out</button></div>
+    </div>
+  </header>
+  <main class="wrap" id="page"></main>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="modal"></div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script src="../theme.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

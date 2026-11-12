@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kifaru 4x4 · Demo</title>
+<meta name="description" content="Demo of the Kifaru 4x4 hire booking system: client booking site and admin management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nobile:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#282626;--fg:#F4EEE9;--muted:#B9AEA7;--line:#4C4544;--card:#332F2E;--accent:#ED5829;--brown:#C79D86;
+  --display:"Nobile","Helvetica Neue",Helvetica,Arial,sans-serif;--body:"Helvetica Neue",Helvetica,Arial,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--body)}
+.wrap{max-width:960px;margin:0 auto;padding-block:56px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,48px);line-height:1.1;margin:8px 0 0;text-wrap:balance;max-width:18ch}
+p{margin:0;max-width:62ch;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+a.card{display:grid;gap:10px;padding:24px;border:1.5px solid var(--line);background:var(--card);color:var(--fg);text-decoration:none}
+a.card:hover,a.card:focus-visible{border-color:var(--fg);outline:none}
+a.card h2{font-family:var(--display);font-weight:400;font-size:24px;margin:0}
+a.card .go{font-weight:700;color:var(--brown)}
+.steps{border-top:1px solid var(--line);padding-top:20px;display:grid;gap:8px}
+.steps ol{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:4px}
+.steps b{color:var(--fg)}
+small{color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div>
+    <div class="eyebrow">Kifaru 4x4 Hire · Demo</div>
+    <h1>Self-drive 4x4 booking, front and back office.</h1>
+  </div>
+  <p>Two sites share this demo. Customers browse and hold a car on Client Booking. Staff run bookings, the fleet, maintenance and reports in Admin Management.</p>
+  <div class="cards">
+    <a class="card" href="client-booking-v2/">
+      <span class="eyebrow">For customers</span>
+      <h2>Client Booking</h2>
+      <p>Search by dates, flick through each car's photos, open a photo for the details, and compare cars side by side. Then request a booking.</p>
+      <span class="go">Open Client Booking →</span>
+    </a>
+    <a class="card" href="admin-management/">
+      <span class="eyebrow">For staff</span>
+      <h2>Admin Management</h2>
+      <p>Needs-action queue, unit calendar, fleet and media, returns and maintenance, inspection and upcoming-hire PDFs, WhatsApp quick replies.</p>
+      <span class="go">Open Admin Management →</span>
+    </a>
+  </div>
+  <div class="steps">
+    <span class="eyebrow">Try the full flow</span>
+    <ol>
+      <li>Open <b>Client Booking</b>, pick a car and dates, and request a booking.</li>
+      <li>Open <b>Admin Management</b> in another tab and sign in with any email. The booking appears under <b>Needs action</b>.</li>
+      <li>Back on Client Booking, open <b>My bookings</b> and enter a payment code. The admin sees it and can approve it.</li>
+    </ol>
+    <small>This is design v2 of Client Booking. The <a href="client-booking/" style="color:var(--brown)">first design</a> is still here for comparison.</small>
+    <small>Demo data lives in your browser only. The demo date is fixed at Wed 4 Nov 2026. Clear this site's data in your browser to start over.</small>
+  </div>
+</main>
+</body>
+</html>
